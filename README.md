@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+                                                       Planner App – My Custom Widget 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Note:- I added one Widget custom of Tic Tac Toe game in the same code of Quest-3 of React-2 Campaign Planner-App.
+In this custom widget I build a game called “Tic Tae Toe”, It a famous game and also one of the best practice for learning front-end-development. 
+ 
 
-## Available Scripts
+In this file you can find the source in src folder->widget->MyCustomWidget.js. 
+ 
+My main reason to build this widget is that sometimes taking a break is mandatory and its fun too! To play with alone or someone who is close to with. 
+ 
 
-In the project directory, you can run:
+State Variables: 
 
-### `npm start`
+board: An array representing the Tic Tac Toe board. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+currentPlayer: A string representing the current player  either in "X" or in  "O" 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+winner: A string representing the winner ("X" or "O"), or draw if there is no winner. 
 
-### `npm test`
+winningLine: An array representing the winning line, which contains the indices of the cells forming the line. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+handleCellClick: 
 
-### `npm run build`
+It's the function called when a cell is clicked. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+It checks if the cell is empty and there is no winner yet. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If conditions are met, it updates the board, currentPlayer, and checks for a winner. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+CheckWinner: 
 
-### `npm run eject`
+It checks for a winner by iterating through the winningCombinations array. 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+It compares the values in the cells and sets the winner and winningLine if a winning combination is found. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ResetGame: 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+It resets the game by resetting the board, currentPlayer, winner, and winningLine to their initial values. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+RenderCell: 
 
-## Learn More
+It renders a single cell based on its index. 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+It applies the CSS classes for the cell and the winning cell based on the board and winningLine states. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+RenderLine: 
 
-### Code Splitting
+It renders a line element based on the winning line direction. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+It applies the CSS class for the line and makes it active if there is a winning line. 
 
-### Analyzing the Bundle Size
+Return: 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+It renders the Tic Tac Toe component. 
 
-### Making a Progressive Web App
+It maps over the board array and renders each cell using the renderCell function. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+It renders the winning lines using the renderLine function. 
 
-### Advanced Configuration
+It renders the winner message and reset button if there is a winner. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+ FOR Css Style:- I have added some styles for the game "Tic Tae Toe" in the Styles folder at style.css just some basic styling and follwed by Quest-3 from StackUp  React-2 Campaign file.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ 
